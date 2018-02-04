@@ -76,7 +76,8 @@ void setup() {
   fill(0);
   //font = createFont("SourceCodePro-Regular-16.vlw", 16);
   //font = createFont("AvenirNext-UltraLightItalic", 36);
-  font = createFont("Monospaced", 36);
+  //font = createFont("Monospaced", 36);
+  font = createFont("Simplex", 36);
   textFont(font);
   //frameRate(1);
   //noLoop();
