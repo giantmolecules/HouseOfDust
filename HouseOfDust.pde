@@ -69,67 +69,46 @@ int spacingY = textSize+10;
 
 void setup() {
   size(1280, 960, PDF, "HouseOfDust.pdf");
-  //size(1280,960);
   textMode(SHAPE);
   textSize(textSize);
   background(255);
   fill(0);
-  //font = createFont("SourceCodePro-Regular-16.vlw", 16);
-  //font = createFont("AvenirNext-UltraLightItalic", 36);
-  //font = createFont("Monospaced", 36);
   font = createFont("Simplex", 36);
   textFont(font);
-  //frameRate(1);
-  //noLoop();
-  
-  //print(PFont.list());
 }
 
 void draw() {
-  //beginRecord(PDF, "Poem.pdf");
+  
   for (int i = 0; i < 1; i++) {
-    //Begin
-    print("A house of ");
-    //text("A house of ", originX+spacingX, originY+spacingY);
     
     // Pick a random material
+    
     randomFloat = random(materials.length);
     randomInt = int(randomFloat);
-    println(materials[randomInt]);
-    //text(materials[randomInt], 100, 50);
+    
     text("A house of "+materials[randomInt], originX, originY);
     
     // Pick a random place
+    
     randomFloat = random(locations.length);
     randomInt = int(randomFloat);
-    print("       ");
-    println(locations[randomInt]);
-    //text(locations[randomInt], 50, 75);
+
     text(locations[randomInt], originX+spacingX, originY+spacingY);
     
     // Pick a random light
+    
     randomFloat = random(lighting.length);
     randomInt = int(randomFloat);
-    print("       ");
-    print("       ");
-    println(lighting[randomInt]);
-    //text(lighting[randomInt], 70, 100);
+
     text(lighting[randomInt], originX+spacingX*2, originY+spacingY*2);
     
     // Pick a random inhabitant
+    
     randomFloat = random(inhabitants.length);
     randomInt = int(randomFloat);
-    print("       ");
-    print("       ");
-    print("       ");
-    println(inhabitants[randomInt]);
-    //text(inhabitants[randomInt], 90, 125);
+
     text(inhabitants[randomInt], originX+spacingX*3, originY+spacingY*3);
     
-    // Print a separator
-    println("");
-    println("");
   }
-  //endRecord();
   exit();
 }
